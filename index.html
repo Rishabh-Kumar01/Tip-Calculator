@@ -6,34 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tip Calculator</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="container">
+    <div id="container">
         <h1>Charles' Tip Calculator</h1>
         <hr>
-        <div class="calculator">
+        <div id="calculator">
             <form>
                 <label>
                     How much was your bill?<br>
-                    $ <input type="text">
+                    $ <input type="text" id="billAmount">
                 </label><br>
                 <label >
                     How was your service?<br>
-                    <select id="select">
-                        <option disabled selected value="">-- Choose an option --</option>
-                        <option name="" id="">30% - Outstanding</option>
-                        <option name="" id="">20% - Good</option>
-                        <option name="" id="">15% - It was okay</option>
-                        <option name="" id="">10% - Bad</option>
-                        <option name="" id="">5% - Terrible</option>
+                    <select id="serviceQuantity">
+                        <option disabled selected value="0">-- Choose an option --</option>
+                        <option value="0.3">30% - Outstanding</option>
+                        <option value="0.2">20% - Good</option>
+                        <option value="0.15">15% - It was okay</option>
+                        <option value="0.1">10% - Bad</option>
+                        <option value="0.05">5% - Terrible</option>
                     </select>
                 </label><br>
                 <label>
                     How may people are sharing the bill?<br>
-                    <input type="text"> people
+                    <input type="text" id="totalPeople"> people
                 </label><br>
-                <button type="button">Calculate!</button>
+                <button type="button" id="calculate">Calculate!</button>
             </form>
+
+            <div id="tipAmount">
+                <sup>$</sup><span id="tip">0.00</span>
+                <small id="each">each</small>
+            </div>
         </div>
     </div>
 </body>

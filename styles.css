@@ -13,12 +13,13 @@ body{
     align-items: center;
 }
 
-.container {
+#container {
     margin: 120px;
-    height: 60vh;
     width: 23%;
     background: url(img/paper-pattern.jpg);
     padding: 3rem 2.8rem;
+    border-radius: .3rem;
+    box-shadow: 0 10px 15px -8px #000;
 }
 
 h1 {
@@ -48,7 +49,7 @@ form input[type="text"]{
     width: 90px;
 }
 
-#select {
+#serviceQuantity {
     margin-bottom: 30px;
 }
 
@@ -63,3 +64,40 @@ form button {
     margin-top: 1rem;
 }
 
+button:hover {
+    background-color: rgb(76, 40, 39);
+}
+
+button:active {
+    position: relative;
+    top: 3px;
+}
+
+#tipAmount {
+    display: none;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+#tipAmount::before {
+    content: "Tip Amount";
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: block;
+}
+
+#tipAmount sup {
+    font-size: 1.4rem;
+    top: -18px;
+}
+
+#tipAmount span {
+    font-size: 3.5rem;
+}
+
+#each {
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: block;
+}
